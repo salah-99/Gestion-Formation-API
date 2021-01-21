@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple Map</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default%22%3E</script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvvrcVU-ERI4KFDqbmn0XINpRs614UpYc&callback=initMap&libraries=&v=weekly"
+    defer></script>
+  <style type="text/css">
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <script>
+    let map;
+
+    function initMap() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      let X = urlParams.get('X')
+      console.log(X);
+      let Y = urlParams.get('Y')
+      console.log(Y);
+      const safi = { lat: Number(X), lng: Number(Y) };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: safi,
+      });
+      const marker = new google.maps.Marker({
+        position: safi,
+        map: map,
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div id="map"></div>
+</body>
+
+</html>
+
+<!-- file:///C:/Users/Admin/eclipse-workspace/Gestion%20de%20Formation/src/application/index.html?X=32.29740462539648&Y=-9.233969451787024 -->
+
+<!-- file:///C:/Users/Admin/eclipse-workspace/Gestion%20de%20Formation/src/application/index.html?X=30.416608403611182&Y=-9.580377231588546 -->
