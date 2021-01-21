@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employeController">
+   <children>
+      <TableView fx:id="tvBox" layoutY="215.0" onMouseClicked="#handeleMousseAction" prefHeight="385.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="matriculeTableColumn" prefWidth="114.0" text="Matriculle" />
+          <TableColumn fx:id="flnameTableColumn" prefWidth="214.0" text="Nom &amp; Prénom" />
+            <TableColumn fx:id="usernameTableColumn" prefWidth="227.0" text="username" />
+            <TableColumn fx:id="villeTableColumn" prefWidth="227.0" text="Ville" />
+        </columns>
+      </TableView>
+      <WebView fx:id="imageWebView" layoutX="-2.0" layoutY="1.0" prefHeight="213.0" />
+   </children>
+</AnchorPane>
